@@ -2,14 +2,10 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
+    <test></test>
     <h2>Ecosystem</h2>
+    <message v-bind:msg="messages">s</message>
+
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
@@ -22,9 +18,10 @@
 <script>
 export default {
   name: 'app',
-  data () {
+  data: function () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      messages: "Hey every bodie's gonna die",
+      number: 1,
     }
   }
 }
