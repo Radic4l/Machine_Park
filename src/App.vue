@@ -1,11 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <message v-bind:msg="messages"></message>
     <h1>{{ msg }}</h1>
     <test></test>
     <h2>Ecosystem</h2>
-    <message v-bind:msg="messages">s</message>
-
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
@@ -20,7 +19,7 @@ export default {
   name: 'app',
   data: function () {
     return {
-      messages: "Hey every bodie's gonna die",
+      messages: "Everybody's gonna die, Come watch TV ?",
       number: 1,
     }
   }
